@@ -3,7 +3,7 @@ import { OrbitControls, Grid, Environment } from '@react-three/drei';
 import { CarModel } from './CarModel';
 export function Scene({ selectedId, onSelect }: { selectedId: string | null, onSelect: (id: string) => void }) {
   return (
-    <Canvas shadows camera={{ position: [5, 3.5, 6], fov: 45 }} onPointerMissed={() => onSelect('')}>
+    <Canvas shadows camera={{ position: [8, 6, 10], fov: 45 }} onPointerMissed={() => onSelect('')}>
       <color attach="background" args={['#1a1d21']} />
       <hemisphereLight intensity={0.6} groundColor="#222" />
       <directionalLight position={[6, 10, 5]} intensity={1.5} castShadow />
@@ -14,3 +14,4 @@ export function Scene({ selectedId, onSelect }: { selectedId: string | null, onS
     </Canvas>
   );
 }
+
